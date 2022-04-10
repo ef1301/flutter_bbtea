@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../colors.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
+import 'dart:io' show Platform;
 
 class MilkTea extends StatefulWidget {
   const MilkTea({ Key? key }) : super(key: key);
@@ -33,6 +34,12 @@ class _MilkTeaState extends State<MilkTea> {
 
   @override
   Widget build(BuildContext context) {
+
+    // Modify left padding if viewport's width is less than 425
+    // Targetting all iOS models before iPhone 12
+    double screenWidth = MediaQuery.of(context).size.width;
+    double leftPadding = screenWidth <= 415 && Platform.isIOS? 10: 25;
+
     return Column(
       children: [
         // Radio Buttons for tea type
@@ -63,7 +70,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -91,7 +98,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -124,7 +131,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -152,7 +159,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -211,7 +218,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -239,7 +246,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -267,7 +274,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -295,7 +302,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -327,7 +334,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -355,7 +362,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -383,7 +390,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -411,7 +418,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -455,7 +462,7 @@ class _MilkTeaState extends State<MilkTea> {
                       SizedBox(
                         height: 20,
                         child: Container(
-                          padding: const EdgeInsets.only(left: 25),
+                          padding: EdgeInsets.only(left: leftPadding),
                           child: Row(
                             children: [
                               Transform.scale(
@@ -513,7 +520,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -547,7 +554,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -576,7 +583,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -604,7 +611,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -637,7 +644,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -666,7 +673,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -695,7 +702,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -724,7 +731,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -774,6 +781,7 @@ class _MilkTeaState extends State<MilkTea> {
                       fontWeight: FontWeight.w500,
                   ))],
               ),
+              const SizedBox(height: 5),
               Row(
                 children: [
                   Column(
@@ -784,7 +792,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -812,7 +820,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -845,7 +853,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -873,7 +881,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -917,7 +925,7 @@ class _MilkTeaState extends State<MilkTea> {
                       SizedBox(
                         height: 20,
                         child: Container(
-                          padding: const EdgeInsets.only(left: 25),
+                          padding: EdgeInsets.only(left: leftPadding),
                           child: Row(
                             children: [
                               Transform.scale(
@@ -964,6 +972,7 @@ class _MilkTeaState extends State<MilkTea> {
                       fontWeight: FontWeight.w500,
                   ))],
               ),
+              const SizedBox(height: 5),
               Row(
                 children: [
                   Column(
@@ -974,7 +983,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -1002,7 +1011,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -1030,7 +1039,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -1063,7 +1072,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -1091,7 +1100,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(
@@ -1119,7 +1128,7 @@ class _MilkTeaState extends State<MilkTea> {
                           SizedBox(
                             height: 20,
                             child: Container(
-                              padding: const EdgeInsets.only(left: 25),
+                              padding: EdgeInsets.only(left: leftPadding),
                               child: Row(
                                 children: [
                                   Transform.scale(

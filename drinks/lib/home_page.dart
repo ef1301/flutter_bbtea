@@ -1,9 +1,11 @@
 import 'colors.dart';
 import 'pages/diyPage.dart';
+import 'pages/historyPage.dart';
 import 'pages/accountPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:fluttericon/linearicons_free_icons.dart';
+
 
 // import 'package:fluttericon/linecons_icons.dart';
 // import 'package:fluttericon/maki_icons.dart';
@@ -25,6 +27,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     listScreens = [
       const DIYPage(),
+      const HistoryPage(),
       const AccountPage(),
     ];
     initialization();
@@ -52,9 +55,13 @@ class _HomePageState extends State<HomePage> {
             label: 'DIY',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.list_alt_outlined),
+            label: 'History',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
             label: 'Account',
-          )
+          ),
         ]
       ),
       );

@@ -30,9 +30,6 @@ class _DIYPageState extends State<DIYPage> {
 
   @override
   Widget build(BuildContext context) {
-
-    // var width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
